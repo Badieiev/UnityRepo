@@ -23,5 +23,5 @@ public class BulletScript : MonoBehaviour
         Health possibleVictim = collision.transform.GetComponent<Health>();
         if (possibleVictim)
             possibleVictim.takeDamage(25);
-    }
+    } 
 }
