@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
+    public LogicScript logic;
     float bulletSpeed = 20f;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,9 @@ public class BulletScript : MonoBehaviour
         print("Ouch");
         Health possibleVictim = collision.transform.GetComponent<Health>();
         if (possibleVictim)
+        {
             possibleVictim.takeDamage(25);
+            logic.addScore();
+        }
     } 
 }
