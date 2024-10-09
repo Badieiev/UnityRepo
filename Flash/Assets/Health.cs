@@ -27,6 +27,7 @@ public class Health : MonoBehaviour
         if (CHP <= 0)
         {
             Destroy(gameObject);
+            logic.gameOver();
         }
     }
 }
