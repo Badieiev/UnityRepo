@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    LogicScript logic;
+    //LogicScript logic;
     float bulletSpeed = 20f;
     // Start is called before the first frame update
     void Start()
     {
-        logic = FindAnyObjectByType<LogicScript>();
+        //logic = FindAnyObjectByType<LogicScript>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class BulletScript : MonoBehaviour
         if (possibleVictim)
         {
             possibleVictim.takeDamage(25);
-            logic.addScore();
+            //logic.addScore();
         }
     } 
 }
