@@ -6,6 +6,8 @@ public class Health : MonoBehaviour
 {
     int MHP = 100;
     int CHP = 100;
+
+    public LogicScript logic;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,7 @@ public class Health : MonoBehaviour
     internal void takeDamage (int howMuchDamage)
     {
         CHP -= howMuchDamage;
+        logic.addScore();
         if (CHP <= 0)
         {
             Destroy(gameObject);
